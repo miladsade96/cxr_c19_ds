@@ -8,3 +8,16 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.losses import binary_crossentropy
 from tensorflow.keras.layers import Dense, Conv2D, MaxPool2D, Dropout, Flatten
+
+# Setting image data generator parameters
+# These are will used for image augmentation
+data_gen_args = dict(
+    rotation_range=0.2,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    horizontal_flip=True,
+    vertical_flip=True,
+    rescale=1./255,
+    zoom_range=0.3,
+    validation_split=0.3
+)
