@@ -42,3 +42,19 @@ valid_data = data_gen.flow_from_directory(
     subset="validation",
     class_mode="binary"
 )
+
+# Creating the model
+model = Sequential(
+    Conv2D(filters=32, kernel_size=(3, 3), activation="relu", input_shape=(256, 256, 3)),
+    Conv2D(filters=64, kernel_size=(3, 3), activation="relu"),
+    MaxPool2D(),
+    Dropout(rate=0.25),
+    Conv2D(filters=128, kernel_size=(3, 3), activation="relu"),
+    MaxPool2D(),
+    Dropout(rate=0.25),
+    Flatten(),
+    Dense(units=64, activation="relu"),
+    Dropout(rate=0.5),
+    Dense(units=1, activation="sigmoid")
+
+)
