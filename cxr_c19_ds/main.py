@@ -58,3 +58,10 @@ model = Sequential(
     Dense(units=1, activation="sigmoid")
 
 )
+
+# Compiling the model
+model.compile(
+    loss=binary_crossentropy,
+    optimizer=Adam(),
+    metrics=['accuracy']
+)
