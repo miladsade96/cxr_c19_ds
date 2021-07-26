@@ -68,3 +68,12 @@ model.compile(
 
 # Model architecture summary
 model.summary()
+
+# Training section
+history = model.fit_generator(
+    train_data,
+    epochs=5,
+    validation_data=valid_data,
+    verbose=1,
+    workers=32
+)
