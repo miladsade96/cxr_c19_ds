@@ -33,3 +33,12 @@ train_data = data_gen.flow_from_directory(
     subset="training",
     class_mode="binary"
 )
+
+# Preparing data for validation process
+valid_data = data_gen.flow_from_directory(
+    directory="../dataset",
+    target_size=(256, 256),
+    batch_size=16,
+    subset="validation",
+    class_mode="binary"
+)
