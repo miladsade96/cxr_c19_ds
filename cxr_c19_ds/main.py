@@ -24,3 +24,12 @@ data_gen_args = dict(
 
 # Instantiating image data generator
 data_gen = image.ImageDataGenerator(**data_gen_args)
+
+# Preparing data for training process
+train_data = data_gen.flow_from_directory(
+    directory="../dataset",
+    target_size=(256, 256),
+    batch_size=16,
+    subset="training",
+    class_mode="binary"
+)
