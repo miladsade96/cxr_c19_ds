@@ -65,3 +65,6 @@ model.compile(
     optimizer=Adam(),
     metrics=['accuracy']
 )
+
+# Model architecture summary
+model.summary()
