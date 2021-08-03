@@ -3,11 +3,13 @@
 """
 
 
+from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.applications import vgg16
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.losses import binary_crossentropy
-from tensorflow.keras.layers import Dense, Conv2D, MaxPool2D, Dropout, Flatten
+from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.losses import sparse_categorical_crossentropy
+
 
 # Setting image data generator parameters
 # These are will used for image augmentation
