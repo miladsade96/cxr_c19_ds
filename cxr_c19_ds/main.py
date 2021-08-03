@@ -18,6 +18,14 @@ vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 
 for layer in vgg_model.layers[:18]:
     layer.trainable = False
 
+# Adding flatten and dense layers to vgg-16
+output = vgg_model.output
+output = Flatten()(output)
+output = Dense(512, activation="relu")(output)
+output = Dropout(0.5)(output)
+output = Dense(3, activation="softmax")(output)
+model = Model(inputs=vgg_model.inputs, outputs=output)
+
 # Setting image data generator parameters
 # These are will used for image augmentation
 data_gen_args = dict(
@@ -52,21 +60,6 @@ valid_data = data_gen.flow_from_directory(
     class_mode="binary"
 )
 
-# Creating the model
-model = Sequential(
-    Conv2D(filters=32, kernel_size=(3, 3), activation="relu", input_shape=(256, 256, 3)),
-    Conv2D(filters=64, kernel_size=(3, 3), activation="relu"),
-    MaxPool2D(),
-    Dropout(rate=0.25),
-    Conv2D(filters=128, kernel_size=(3, 3), activation="relu"),
-    MaxPool2D(),
-    Dropout(rate=0.25),
-    Flatten(),
-    Dense(units=64, activation="relu"),
-    Dropout(rate=0.5),
-    Dense(units=1, activation="sigmoid")
-
-)
 
 # Compiling the model
 model.compile(
