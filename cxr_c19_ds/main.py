@@ -4,7 +4,8 @@
 
 
 from tensorflow.keras.models import Model
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.callbacks import Callback
+from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Dense, Dropout, Flatten
