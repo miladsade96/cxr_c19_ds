@@ -95,10 +95,12 @@ cb = [TerminateOnBaseLine(monitor='val_accuracy', baseline=0.97)]
 # Training section
 history = model.fit_generator(
     train_data,
-    epochs=5,
+    epochs=50,
     validation_data=valid_data,
     verbose=1,
-    workers=32
+    workers=32,
+    validation_steps=8,
+    callbacks=cb
 )
 
 # Saving trained model
