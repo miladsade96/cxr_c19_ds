@@ -5,11 +5,14 @@
 
 from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.applications import vgg16
+from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Dense, Dropout, Flatten
 from tensorflow.keras.losses import sparse_categorical_crossentropy
 
+
+# Instantiating the model with passing default parameters values
+vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 3))
 
 # Setting image data generator parameters
 # These are will used for image augmentation
