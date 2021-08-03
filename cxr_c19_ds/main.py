@@ -63,7 +63,7 @@ valid_data = data_gen.flow_from_directory(
 
 # Compiling the model
 model.compile(
-    loss=binary_crossentropy,
+    loss=sparse_categorical_crossentropy,
     optimizer=Adam(),
     metrics=['accuracy']
 )
