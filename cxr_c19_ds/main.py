@@ -9,7 +9,7 @@ from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.layers import Dense, Dropout, Flatten
-from tensorflow.keras.losses import sparse_categorical_crossentropy
+from tensorflow.keras.losses import categorical_crossentropy
 
 
 # Instantiating the model with passing default parameters values
