@@ -15,8 +15,8 @@ from tensorflow.keras.losses import categorical_crossentropy
 # Instantiating the model with passing default parameters values
 vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 3))
 
-# Freezing vgg model layers
-for layer in vgg_model.layers[:18]:
+# Freezing the first 18 layers of vgg model
+for layer in vgg_model.layers[:17]:
     layer.trainable = False
 
 # Adding flatten and dense layers to vgg-16
