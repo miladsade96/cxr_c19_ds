@@ -88,7 +88,7 @@ class TerminateOnBaseLine(Callback):
 
 
 # Terminating training process when validation accuracy reaches the specified baseline
-cb = [TerminateOnBaseLine(monitor='val_accuracy', baseline=0.97)]
+cb = [TerminateOnBaseLine(monitor='val_accuracy', baseline=0.95)]
 
 # Training section
 history = model.fit_generator(
