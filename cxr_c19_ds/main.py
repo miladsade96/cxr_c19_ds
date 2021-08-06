@@ -62,8 +62,8 @@ valid_data = data_gen.flow_from_directory(
 
 # Compiling the model
 model.compile(
-    loss=sparse_categorical_crossentropy,
-    optimizer=RMSprop(),
+    loss=categorical_crossentropy,
+    optimizer=RMSprop(learning_rate=0.00001),
     metrics=['accuracy']
 )
 
