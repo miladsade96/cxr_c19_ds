@@ -47,18 +47,16 @@ data_gen = image.ImageDataGenerator(**data_gen_args)
 train_data = data_gen.flow_from_directory(
     directory="../dataset",
     target_size=(224, 224),
-    batch_size=16,
-    subset="training",
-    class_mode="binary"
+    batch_size=32,
+    subset="training"
 )
 
 # Preparing data for validation process
 valid_data = data_gen.flow_from_directory(
     directory="../dataset",
     target_size=(224, 224),
-    batch_size=16,
-    subset="validation",
-    class_mode="binary"
+    batch_size=32,
+    subset="validation"
 )
 
 
