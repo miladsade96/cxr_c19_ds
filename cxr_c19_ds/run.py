@@ -10,3 +10,8 @@ from tensorflow import expand_dims
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
+
+# Loading saved model and displaying its architecture
+path = "../models/"
+model = load_model(filepath=path)
+model.summary()
