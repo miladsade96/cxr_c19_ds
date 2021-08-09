@@ -15,3 +15,6 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 path = "../models/"
 model = load_model(filepath=path)
 model.summary()
+
+# Defining class names
+classes = {0: "Covid", 1: "Normal", 2: "Viral Pneumonia"}
