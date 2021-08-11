@@ -53,3 +53,16 @@ cb = [TerminateOnBaseLine(monitor='accuracy', baseline=0.95)]
 # Loading saved model
 model = load_model("../models/")
 model.summary()
+
+# Training section
+history = model.fit_generator(
+    train_data,
+    epochs=50,
+    verbose=1,
+    workers=32,
+    callbacks=cb
+)
+
+# Saving trained model
+path = "../models"
+model.save(filepath=path)
