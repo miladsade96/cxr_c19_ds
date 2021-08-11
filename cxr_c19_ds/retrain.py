@@ -17,3 +17,13 @@ data_gen_args = dict(
     rescale=1./255,
     zoom_range=0.3,
 )
+
+# Instantiating image data generator
+data_gen = image.ImageDataGenerator(**data_gen_args)
+# Preparing data for training process
+train_data = data_gen.flow_from_directory(
+    directory="/dataset/",
+    target_size=(224, 224),
+    batch_size=32,
+    subset="training"
+)
