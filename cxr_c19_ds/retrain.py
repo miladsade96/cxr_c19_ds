@@ -44,3 +44,7 @@ class TerminateOnBaseLine(Callback):
             if acc >= self.baseline:
                 print('Epoch %d: Reached baseline, terminating training' % epoch)
                 self.model.stop_training = True
+
+
+# Terminating training process when accuracy reaches the specified baseline
+cb = [TerminateOnBaseLine(monitor='accuracy', baseline=0.95)]
