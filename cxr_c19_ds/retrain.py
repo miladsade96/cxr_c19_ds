@@ -21,9 +21,10 @@ data_gen_args = dict(
 
 # Instantiating image data generator
 data_gen = image.ImageDataGenerator(**data_gen_args)
+path = "../dataset/"
 # Preparing data for training process
 train_data = data_gen.flow_from_directory(
-    directory="/dataset/",
+    directory=path,
     target_size=(224, 224),
     batch_size=32,
     subset="training"
@@ -48,3 +49,7 @@ class TerminateOnBaseLine(Callback):
 
 # Terminating training process when accuracy reaches the specified baseline
 cb = [TerminateOnBaseLine(monitor='accuracy', baseline=0.95)]
+
+# Loading saved model
+model = load_model("../models/")
+model.summary()
