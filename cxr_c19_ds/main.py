@@ -38,7 +38,7 @@ data_gen_args = dict(
     vertical_flip=True,
     rescale=1./255,
     zoom_range=0.3,
-    validation_split=0.1
+    validation_split=0.2
 )
 
 # Instantiating image data generator
