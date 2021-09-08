@@ -46,7 +46,7 @@ data_gen = image.ImageDataGenerator(**data_gen_args)
 
 # Preparing data for training process
 train_data = data_gen.flow_from_directory(
-    directory="../dataset",
+    directory="path to kaggle dataset",
     target_size=(224, 224),
     batch_size=32,
     subset="training"
@@ -54,7 +54,7 @@ train_data = data_gen.flow_from_directory(
 
 # Preparing data for validation process
 valid_data = data_gen.flow_from_directory(
-    directory="../dataset",
+    directory="path to kaggle dataset",
     target_size=(224, 224),
     batch_size=32,
     subset="validation"
