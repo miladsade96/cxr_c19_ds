@@ -106,5 +106,5 @@ history = model.fit(
 )
 
 # Saving trained model
-path = "../models"
+path = "./"
 model.save(filepath=path)
