@@ -16,8 +16,8 @@ from tensorflow.keras.losses import categorical_crossentropy
 # Weights parameter may be either "imagenet" string or direct path to .h5 file downloaded from googleapis
 vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 3))
 
-# Freezing the first 18 layers of vgg model
-for layer in vgg_model.layers[:17]:
+# Freezing all vgg-16 model layers except last convolutional block
+for layer in vgg_model.layers[:15]:
     layer.trainable = False
 
 # Adding flatten and dense layers to vgg-16
