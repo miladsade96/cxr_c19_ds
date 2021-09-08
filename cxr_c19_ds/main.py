@@ -4,7 +4,7 @@
 
 
 from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import Callback
+from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image
