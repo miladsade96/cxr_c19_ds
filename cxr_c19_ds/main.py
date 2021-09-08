@@ -25,7 +25,7 @@ output = vgg_model.output
 output = Flatten()(output)
 output = Dense(512, activation="relu")(output)
 output = Dropout(0.2)(output)
-output = Dense(3, activation="softmax")(output)
+output = Dense(4, activation="softmax")(output)
 model = Model(inputs=vgg_model.inputs, outputs=output)
 
 # Setting image data generator parameters
