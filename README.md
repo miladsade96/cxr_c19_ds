@@ -25,3 +25,6 @@ and fine-tuning to adapt pre-trained model on our issue. We gained 90% accuracy 
 
 ## Authors
 * Milad Sadeghi DM [@EverLookNeverSee](https://github.com/EverLookNeverSee)
+
+## License
+This project licensed under the **MIT License** - see the [LICENSE](LICENSE) file for more details.
