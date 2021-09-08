@@ -96,7 +96,7 @@ cb = [percent, best_only]
 
 
 # Training section
-history = model.fit_generator(
+history = model.fit(
     train_data,
     epochs=50,
     validation_data=valid_data,
