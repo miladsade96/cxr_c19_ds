@@ -22,3 +22,6 @@ and fine-tuning to adapt pre-trained model on our issue. We gained 90% accuracy 
 ## Useful links
 * Dataset: [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
 * Trained model: [Download from google drive](https://drive.google.com/file/d/1PKdD3YDQVDrEgfDlvRhLW7Y4Qus3FTNn/view?usp=sharing)
+
+## Authors
+* Milad Sadeghi DM [@EverLookNeverSee](https://github.com/EverLookNeverSee)
