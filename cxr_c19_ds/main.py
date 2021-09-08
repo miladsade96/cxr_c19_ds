@@ -98,8 +98,7 @@ cb = [percent, best_only]
 # Training section
 history = model.fit(
     train_data,
-    epochs=50,
-    validation_data=valid_data,
+    epochs=55,
     verbose=1,
     workers=32,
     validation_steps=8,
