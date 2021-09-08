@@ -89,7 +89,11 @@ class TerminateOnBaseLine(Callback):
 
 
 # Terminating training process when validation accuracy reaches the specified baseline
-cb = [TerminateOnBaseLine(monitor='val_accuracy', baseline=0.95)]
+percent = TerminateOnBaseLine(monitor='val_acc', baseline=0.90)
+# Configuring model checkpoint to save only best validation accuracy
+best_only = ModelCheckpoint(filepath="./", monitor="val_acc", verbose=1, save_best_only=True, mode="max")
+cb = [percent, best_only]
+
 
 # Training section
 history = model.fit_generator(
