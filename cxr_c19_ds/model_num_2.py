@@ -5,6 +5,7 @@
 """
 
 
+from tensorflow.keras.models import Model
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.activations import relu, softmax
