@@ -32,3 +32,8 @@ conv_2 = AveragePooling2D(pool_size=(2, 2), strides=(3, 3))(conv_2)
 conv_3 = Conv2D(filters=16, kernel_size=(5, 5), activation=relu)(input_)
 conv_3 = BatchNormalization()(conv_3)
 conv_3 = MaxPooling2D(pool_size=(2, 2), strides=(3, 3))(conv_3)
+
+# Defining fourth parallel layer
+conv_4 = Conv2D(filters=16, kernel_size=(9, 9), activation=relu)(input_)
+conv_4 = BatchNormalization()(conv_4)
+conv_4 = MaxPooling2D(pool_size=(2, 2), strides=(3, 3))(conv_4)
