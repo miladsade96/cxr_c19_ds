@@ -19,6 +19,11 @@ from tensorflow.keras.layers import (Conv2D, Dense, BatchNormalization, Concaten
 input_ = Input(shape=(224, 224, 3))
 
 # Defining first parallel layer
-x = Conv2D(filters=16, kernel_size=(3, 3), activation=relu)(input_)
-x = BatchNormalization()(x)
-x = AveragePooling2D(pool_size=(2, 2), strides=(3, 3))(x)
+conv_1 = Conv2D(filters=16, kernel_size=(3, 3), activation=relu)(input_)
+conv_1 = BatchNormalization()(conv_1)
+conv_1 = AveragePooling2D(pool_size=(2, 2), strides=(3, 3))(conv_1)
+
+# Defining second parallel layer
+conv_2 = Conv2D(filters=16, kernel_size=(5, 5), activation=relu)(input_)
+conv_2 = BatchNormalization()(conv_2)
+conv_2 = AveragePooling2D(pool_size=(2, 2), strides=(3, 3))(conv_2)
