@@ -37,3 +37,11 @@ conv_3 = MaxPooling2D(pool_size=(2, 2), strides=(3, 3))(conv_3)
 in_4 = Conv2D(filters=16, kernel_size=(9, 9), activation='relu', padding='same')(input_)
 conv_4 = BatchNormalization()(in_4)
 conv_4 = MaxPooling2D(pool_size=(2, 2), strides=(3, 3))(conv_4)
+
+# Concatenating layers
+concat = Concatenate()([conv_1, conv_2, conv_3, conv_4])
+flat = Flatten()(concat)
+out = Dense(units=4, activation='softmax')(flat)
+# Creating model
+model = Model(inputs=[input_], outputs=[out])
+model.summary()
