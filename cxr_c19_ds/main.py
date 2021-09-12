@@ -5,13 +5,10 @@
 """
 
 
-from tensorflow.keras.models import Model
-from tensorflow.keras.callbacks import Callback, ModelCheckpoint
-from tensorflow.keras.optimizers import RMSprop
-from tensorflow.keras.applications import VGG16
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.losses import categorical_crossentropy
+from tensorflow.keras.callbacks import Callback, ModelCheckpoint
 
 
 # Setting image data generator parameters
@@ -47,17 +44,6 @@ valid_data = data_gen.flow_from_directory(
 )
 
 
-# Compiling the model
-model.compile(
-    loss=categorical_crossentropy,
-    optimizer=RMSprop(learning_rate=0.00001),
-    metrics=['accuracy']
-)
-
-# Model architecture summary
-model.summary()
-
-
 class TerminateOnBaseLine(Callback):
     """Callback that terminates training when either acc or val_acc reaches a specified baseline"""
     def __init__(self, monitor='accuracy', baseline=0.9):
@@ -79,18 +65,3 @@ percent = TerminateOnBaseLine(monitor='val_acc', baseline=0.90)
 # Configuring model checkpoint to save only best validation accuracy
 best_only = ModelCheckpoint(filepath="./", monitor="val_acc", verbose=1, save_best_only=True, mode="max")
 cb = [percent, best_only]
-
-
-# Training section
-history = model.fit(
-    train_data,
-    epochs=55,
-    verbose=1,
-    workers=32,
-    validation_steps=8,
-    callbacks=cb
-)
-
-# Saving trained model
-path = "./"
-model.save(filepath=path)
