@@ -16,3 +16,11 @@ vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 
 # Freezing all vgg-16 model layers except last convolutional block
 for layer in vgg_model.layers[:15]:
     layer.trainable = False
+
+# Adding flatten and dense layers to vgg-16
+output = vgg_model.output
+output = Flatten()(output)
+output = Dense(512, activation="relu")(output)
+output = Dropout(0.2)(output)
+output = Dense(4, activation="softmax")(output)
+transferred_model = Model(inputs=vgg_model.inputs, outputs=output, name="Transferred Model")
