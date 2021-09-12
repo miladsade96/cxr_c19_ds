@@ -38,5 +38,5 @@ concat = Concatenate()([conv_1, conv_2, conv_3, conv_4])
 flat = Flatten()(concat)
 out = Dense(units=4, activation='softmax')(flat)
 # Creating model
-model = Model(inputs=[input_], outputs=[out])
+model = Model(inputs=[input_], outputs=[out], name="Parallel Model")
 model.summary()
