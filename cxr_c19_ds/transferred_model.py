@@ -7,3 +7,8 @@
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications import VGG16
 from tensorflow.keras.layers import Flatten, Dense, Dropout
+
+
+# Instantiating the model with passing default parameters values
+# Weights parameter may be either "imagenet" string or direct path to .h5 file downloaded from googleapis
+vgg_model = VGG16(weights="imagenet", include_top=False, input_shape=(224, 244, 3))
