@@ -1,5 +1,7 @@
 """
-    Chest X-Ray Covid-19 Detection System
+    Main section to train designed models
+
+    Author: Milad Sadeghi DM - EverLookNeverSee@GitHub
 """
 
 
