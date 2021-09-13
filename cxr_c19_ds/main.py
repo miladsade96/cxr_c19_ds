@@ -42,3 +42,7 @@ valid_data = data_gen.flow_from_directory(
     batch_size=32,
     subset="validation"
 )
+
+# Early Stopping
+early_stop_rule = EarlyStopping(monitor="val_acc", mode="max", baseline=0.95)
+cb = [early_stop_rule]
