@@ -8,7 +8,7 @@
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras.losses import categorical_crossentropy
-from tensorflow.keras.callbacks import Callback, ModelCheckpoint
+from tensorflow.keras.callbacks import EarlyStopping
 
 
 # Setting image data generator parameters
