@@ -14,7 +14,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/EverLookNeverSee/cxr_c19_ds)
 ![GitHub last commit](https://img.shields.io/github/last-commit/EverLookNeverSee/cxr_c19_ds)
 
-![Pre-trained model architecture](images/vgg-16.png)
+![Pre-trained model architecture](images/transferred_model.png)
 
 ## Description
 Covid-19 detection system using chest x-ray images based on transfer learning. We used [VGG-16](https://keras.io/api/applications/vgg/#vgg16-function) pre-trained model
