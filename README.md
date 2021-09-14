@@ -22,8 +22,14 @@
 ![Parallel model architecture](images/parallel_model.png)
 
 ## Description
-Covid-19 detection system using chest x-ray images based on transfer learning. We used [VGG-16](https://keras.io/api/applications/vgg/#vgg16-function) pre-trained model
-and fine-tuning to adapt pre-trained model on our issue. We gained 90% accuracy after 55 epochs.
+Covid-19 detection system using chest x-ray images based on transfer learning and custom architecture model. We used [VGG-16](https://keras.io/api/applications/vgg/#vgg16-function) pre-trained model
+and fine-tuning to adapt pre-trained model on our issue.
+
+| Model name      | Accuracy                                     |  
+| :---------      | :-------                                     |
+| VGG-16          | <center>%90</center>                         |
+| Custom Parallel | <center>Work in progress(training)</center>  |
+
 
 ## Useful links
 * Dataset: [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
