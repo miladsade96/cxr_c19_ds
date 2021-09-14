@@ -33,7 +33,8 @@ and fine-tuning to adapt pre-trained model on our issue.
 
 ## Useful links
 * Dataset: [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
-* Trained model: [Download from google drive](https://drive.google.com/file/d/1PKdD3YDQVDrEgfDlvRhLW7Y4Qus3FTNn/view?usp=sharing)
+* Trained VGG-16 model: [Download from google drive](https://drive.google.com/file/d/1PKdD3YDQVDrEgfDlvRhLW7Y4Qus3FTNn/view?usp=sharing)
+* Trained parallel model: Work in progress(Training)
 
 ## Authors
 * Milad Sadeghi DM [@EverLookNeverSee](https://github.com/EverLookNeverSee)
