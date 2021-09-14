@@ -14,8 +14,11 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/EverLookNeverSee/cxr_c19_ds)
 ![GitHub last commit](https://img.shields.io/github/last-commit/EverLookNeverSee/cxr_c19_ds)
 
+
+#### Pre-trained vgg-16 model architecture:
 ![Transferred model architecture](images/transferred_model.png)
 
+#### Parallel model architecture:
 ![Parallel model architecture](images/parallel_model.png)
 
 ## Description
