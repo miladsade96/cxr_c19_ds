@@ -1,5 +1,5 @@
 """
-    Main section to train designed models
+    Preprocessing settings and data generator configurations
 
     Author: Milad Sadeghi DM - EverLookNeverSee@GitHub
 """
