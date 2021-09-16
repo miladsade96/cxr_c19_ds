@@ -39,3 +39,10 @@ if args.verbose:
 img_batch = np.expand_dims(img_array, axis=0)
 if args.verbose:
     print("Image batch created.")
+
+# Predicting the class
+prediction = model.predict(img_batch)
+if args.verbose:
+    print(f"Predicted class is: {classes.get(int(np.argmax(prediction)))}")
+else:
+    print(classes.get(int(np.argmax(prediction))))
