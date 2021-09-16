@@ -14,7 +14,7 @@ model = load_model(filepath=path)
 model.summary()
 
 # Defining class names
-classes = {0: "Covid", 1: "Normal", 2: "Viral Pneumonia"}
+classes = {0: "Covid", 1: "Lung Opacity", 2: "Normal", 3: "Viral Pneumonia"}
 
 # Analyzing model prediction
 image_path = "../For Local Test/COVID/COVID-2893.png"
