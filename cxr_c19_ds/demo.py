@@ -27,3 +27,15 @@ model = load_model(filepath=model_path)
 if args.verbose:
     # Displaying model architecture and details
     print(model.summary())
+
+# Loading the image
+image_path = args.image
+img = load_img(image_path, target_size=(224, 224))
+if args.verbose:
+    print("Image is loaded and resized to 224x224")
+img_array = img_to_array(img)
+if args.verbose:
+    print("Image converted to the array.")
+img_batch = np.expand_dims(img_array, axis=0)
+if args.verbose:
+    print("Image batch created.")
