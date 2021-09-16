@@ -20,3 +20,10 @@ parser.add_argument("-i", "--image", help="Path to image file")
 parser.add_argument("-v", "--verbose", action="store_true", help="Level of verbosity")
 # Parsing the arguments
 args = parser.parse_args()
+
+model_path = args.model
+# Loading saved model
+model = load_model(filepath=model_path)
+if args.verbose:
+    # Displaying model architecture and details
+    print(model.summary())
