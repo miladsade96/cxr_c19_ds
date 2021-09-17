@@ -64,17 +64,13 @@ model = transferred_model
 if args.verbose:
     model.summary()
 
-        else:
-            model = supported_models.__getitem__("Parallel")
-            # Displaying model details
-            model.summary()
-
-        # Model compilation
-        model.compile(
-            optimizer=RMSprop(learning_rate=0.00001),
-            loss=categorical_crossentropy,
-            metrics=["accuracy"]
-        )
+# Setting learning rate and compiling the model
+lr = args.learning_rate
+model.compile(
+    optimizer=RMSprop(learning_rate=lr),
+    loss=categorical_crossentropy,
+    metrics=["accuracy"]
+)
 
         # Training model
         model.fit(
