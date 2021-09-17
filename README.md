@@ -22,10 +22,27 @@
 Covid-19 detection system using chest x-ray images based on transfer learning. We used [VGG-16](https://keras.io/api/applications/vgg/#vgg16-function) pre-trained model
 and fine-tuning to adapt pre-trained model on our issue.
 
-| Model name      | Accuracy                                     |  
-| :---------      | :-------                                     |
-| VGG-16          | <center>%90</center>                         |
-| Custom Parallel | <center>Work in progress(training)</center>  |
+| Model name      | Accuracy                 |  
+| :---------      | :-------                 |
+| VGG-16          | <center>%90</center>     |
+
+## Authors
+* Milad Sadeghi DM [@EverLookNeverSee](https://github.com/EverLookNeverSee)
+
+## Demo
+Run command below to display arguments:
+```shell
+$ python3 demo.py --help
+
+-m    --model          Path to saved model directory
+-i    --image          Path to image file
+-v    --verbose        Level of verbosity
+```
+
+Example:
+```shell
+$ python3 demo.py --verbose --model <path_to_saved_model_directory> --image <path_to_image_file>
+```
 
 
 ## Useful links
