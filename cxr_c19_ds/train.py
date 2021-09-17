@@ -13,8 +13,19 @@ from tensorflow.keras.preprocessing import image
 from tensorflow.keras.losses import categorical_crossentropy
 
 
-# Defining supported models
-supported_models = {"VGG-16": transferred_model, "Parallel": parallel_model}
+# Initializing argument parser
+parser = argparse.ArgumentParser()
+# Adding optional arguments
+parser.add_argument("-d", "--dataset", help="Path to dataset directory")
+parser.add_argument("-b", "--batch-size", help="Batch size", type=int)
+parser.add_argument("-l", "--learning-rate", help="Learning rate", type=float)
+parser.add_argument("-v", "--verbose", help="Level of verbosity", action="store_true")
+parser.add_argument("-w", "--workers", help="Number of workers", type=int)
+parser.add_argument("-n", "--epochs", help="Number od epochs", type=int)
+parser.add_argument("-s", "--save", help="Path to save trained model", default=getcwd())
+# Parsing the arguments
+args = parser.parse_args()
+
 
 
 while True:
