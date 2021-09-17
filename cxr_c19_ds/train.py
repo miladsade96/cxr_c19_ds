@@ -72,19 +72,16 @@ model.compile(
     metrics=["accuracy"]
 )
 
-        # Training model
-        model.fit(
-            train_data,
-            validation_data=valid_data,
-            verbose=1,
-            workers=32,
-            epochs=100,
-            validation_steps=8,
-            callbacks=cb
-        )
-        print("TRaining process finished successfully.")
+# Training the model
+model.fit(
+    train_data,
+    validation_data=valid_data,
+    verbose=args.verbose,
+    workers=args.workers,
+    epochs=args.epochs,
+    validation_split=8
+)
 
-        # Saving trained model
-        model.save(filepath="./")
-
-        print(f"Model Saved at {getcwd()}")
+# Save the model
+model.save(filepath=args.save)
+print(f"Trained model saved successfully in {args.save}")
