@@ -27,6 +27,37 @@ parser.add_argument("-s", "--save", help="Path to save trained model", default=g
 args = parser.parse_args()
 
 
+# Setting image data generator parameters
+# These are will be used for image augmentation
+data_gen_args = dict(
+    rotation_range=0.2,
+    width_shift_range=0.2,
+    height_shift_range=0.2,
+    horizontal_flip=True,
+    vertical_flip=True,
+    rescale=1./255,
+    zoom_range=0.3,
+    validation_split=0.2
+)
+
+# Instantiating image data generator
+data_gen = image.ImageDataGenerator(**data_gen_args)
+
+# Preparing data for training process
+train_data = data_gen.flow_from_directory(
+    directory=args.dataset,
+    target_size=(224, 224),
+    batch_size=args.batch_size,
+    subset="training"
+)
+
+# Preparing data for validation process
+valid_data = data_gen.flow_from_directory(
+    directory=args.dataset,
+    target_size=(224, 224),
+    batch_size=args.batch_size,
+    subset="validation"
+)
 
 while True:
     print("  CXR_C19_DS  Training".center(30, "*"))
