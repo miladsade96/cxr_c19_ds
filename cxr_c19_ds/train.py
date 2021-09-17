@@ -4,11 +4,13 @@
     Author: Milad Sadeghi DM - EverLookNeverSee@GitHub
 """
 
+
+import argparse
 from os import getcwd
-from cxr_c19_ds.parallel_model import parallel_model
-from cxr_c19_ds.transferred_model import transferred_model
-from cxr_c19_ds.preprocessing import train_data, valid_data, cb
 from tensorflow.keras.optimizers import RMSprop
+from tensorflow.keras.preprocessing import image
+from tensorflow.keras.callbacks import EarlyStopping
+from cxr_c19_ds.transferred_model import transferred_model
 from tensorflow.keras.losses import categorical_crossentropy
 
 
