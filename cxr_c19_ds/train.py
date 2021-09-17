@@ -22,7 +22,7 @@ parser.add_argument("-l", "--learning-rate", help="Learning rate", type=float)
 parser.add_argument("-v", "--verbose", help="Level of verbosity", action="store_true")
 parser.add_argument("-w", "--workers", help="Number of workers", type=int)
 parser.add_argument("-n", "--epochs", help="Number od epochs", type=int)
-parser.add_argument("-s", "--save", help="Path to save trained model", default=getcwd())
+parser.add_argument("-s", "--save", help="Specify a directory path to save trained model", default=getcwd())
 # Parsing the arguments
 args = parser.parse_args()
 
