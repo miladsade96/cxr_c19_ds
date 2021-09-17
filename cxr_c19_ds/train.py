@@ -1,5 +1,5 @@
 """
-    Training the models
+    Preprocessing the data and training the models
 
     Author: Milad Sadeghi DM - EverLookNeverSee@GitHub
 """
