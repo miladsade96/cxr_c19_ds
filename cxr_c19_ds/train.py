@@ -59,18 +59,10 @@ valid_data = data_gen.flow_from_directory(
     subset="validation"
 )
 
-while True:
-    print("  CXR_C19_DS  Training".center(30, "*"))
-    print(f"Supported models are: {[keys for keys in supported_models.keys()]}")
-    value = input("Please select the model to train:")
-    if value not in supported_models.keys():
-        print(f"You selected unsupported model: {value}. Please try again!")
-        continue
-    else:
-        if value == "VGG-16":
-            model = supported_models.__getitem__("VGG-16")
-            # Displaying model details
-            model.summary()
+# Loading vgg-16 fine-tuned model
+model = transferred_model
+if args.verbose:
+    model.summary()
 
         else:
             model = supported_models.__getitem__("Parallel")
