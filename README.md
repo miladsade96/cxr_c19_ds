@@ -18,9 +18,6 @@
 #### Pre-trained vgg-16 model architecture:
 ![Transferred model architecture](images/transferred_model.png)
 
-#### Parallel model architecture:
-![Parallel model architecture](images/parallel_model.png)
-
 ## Description
 Covid-19 detection system using chest x-ray images based on transfer learning and custom architecture model. We used [VGG-16](https://keras.io/api/applications/vgg/#vgg16-function) pre-trained model
 and fine-tuning to adapt pre-trained model on our issue.
