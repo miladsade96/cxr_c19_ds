@@ -67,7 +67,7 @@ $ python3 train.py -d ~/dataset -b 32 -l 0.00001 -v -w 32 -e 100 -s ~/models/
 
 ## Useful links
 * Dataset: [COVID-19 Radiography Database](https://www.kaggle.com/tawsifurrahman/covid19-radiography-database)
-* Trained VGG-16 model: [Download from google drive](https://drive.google.com/file/d/1PKdD3YDQVDrEgfDlvRhLW7Y4Qus3FTNn/view?usp=sharing)
+* Trained model: [Download from google drive](https://drive.google.com/drive/folders/1oqrAVcaDbiHj37Eb6Juo7cigl5CP6P7R?usp=sharing)
 
 ## License
 This project licensed under the **MIT License** - see the [LICENSE](LICENSE) file for more details.
