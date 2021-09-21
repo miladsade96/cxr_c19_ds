@@ -21,7 +21,7 @@ for layer in vgg_model.layers[:15]:
 output = vgg_model.output
 output = Flatten()(output)
 output = Dense(512, activation="relu")(output)
-output = Dropout(0.2)(output)
+output = Dropout(0.3)(output)
 output = Dense(4, activation="softmax")(output)
 transferred_model = Model(inputs=vgg_model.inputs, outputs=output, name="Transferred Model")
 
