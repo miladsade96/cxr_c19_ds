@@ -26,6 +26,7 @@ and fine-tuning to adapt model on our issue.
 | :---------      | :-------  |  :-----  |
 | VGG-16          | %92       |  30      |
 
+![Model Accuracy](images/Model%20Accuracy.png) ![Model Loss](images/Model%20Loss.png)
 
 ## Authors
 * Milad Sadeghi DM [@EverLookNeverSee](https://github.com/EverLookNeverSee)
