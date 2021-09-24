@@ -1,6 +1,7 @@
 # CXR_C19_DS
 ### Chest X-Ray Covid-19 Detection System 
 
+[![CodeFactor](https://www.codefactor.io/repository/github/everlookneversee/cxr_c19_ds/badge)](https://www.codefactor.io/repository/github/everlookneversee/cxr_c19_ds)
 ![GitHub](https://img.shields.io/github/license/EverLookNeverSee/cxr_c19_ds)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/EverLookNeverSee/cxr_c19_ds/main)
 ![GitHub language count](https://img.shields.io/github/languages/count/EverLookNeverSee/cxr_c19_ds)
